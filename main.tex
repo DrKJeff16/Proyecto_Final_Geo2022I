@@ -32,27 +32,50 @@
 % --FIXME: Eliminar la numeracion tipo "0.X.X" de la Tabla de Contenidos
 \renewcommand*\contentsname{Índice} % Da formato a la Tabla de Contenidos
 
+% -- Elimina el texto "Chapter N"
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \Huge\bfseries\space\thechapter.\space
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+
 % --TODO - Documento:
 %    - Crear las secciones [X] - Guena
 %    - Crear y formatear el texto []
 
 \begin{document}
+
   \maketitle
   \pagenumbering{arabic}
   \tableofcontents
   \newpage
-
+  
+  \chapter{Introducción}
+  \section{Marco histórico}
+  \section{Abstracto}
+  
+  \chapter{Desarrollo}
+  \renewcommand{\chaptername}{Jornada}
   \section{Introducción}
-    \subsection{Marco Histórico}
-    \subsection{Abstracto}
-  \section{Desarrollo}
-    \subsection{Introducción}
-      \subsubsection{¿Qué es una esfera?}
-      \subsubsection{Ecuación de una esfera}
-    \subsection{Conversión de coordenadas}
-       \subsubsection{Conversión de coordenadas rectangulares a esféricas}
-       \subsubsection{Conversión de coordenadas esféricas a rectangulares}
-    \subsection{Conclusiones}
-      \subsubsection{Ejercicios de aplicación}
-  \section{Bibliografía y Referencias}
+    \subsection{¿Qué es una esfera?}
+    \subsection{Ecuación de una esfera}
+    \subsection{¿Qué son las coordenadas esféricas?}
+    \subsection{Gráfica de un punto en coordenadas esféricas}
+  \section{Conversión de coordenadas}
+    \subsection{De coordenadas rectangulares a esféricas}
+    \subsection{De coordenadas esféricas a rectangulares}
+  \section{Conclusiones}
+  
+  \chapter{Referencias}
+  
 \end{document}
