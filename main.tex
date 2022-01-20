@@ -57,31 +57,33 @@
   \newpage
   
   \chapter{Introducción}
-    En este documento se explicarán las coordenadas esféricas, sus propiedades, sus aplicaciones y cómo convertirlas a otros sistemas de coordenadas.
+    \input{introduccion/introduccion.tex}
   \section{Marco histórico}
     \input{introduccion/marco_historico.tex}
   \section{Abstracto}
     \input{introduccion/abstracto.tex}
   
   \chapter{Desarrollo}
-  \renewcommand{\chaptername}{Jornada}
+    \renewcommand{\chaptername}{Jornada}
+    \input{desarrollo/desarrollo.tex}
   \section{Introducción}
     \subsection{¿Qué es una esfera?}
-        \input{que_es_esfera}
+        \input{desarrollo/introduccion/que_es_esfera.tex}
     \subsection{Ecuación de una esfera}
-        \input{ecuacion_esfera}
+        \input{desarrollo/introduccion/ecuacion_esfera.tex}
     \subsection{¿Qué son las coordenadas esféricas?}
-        \input{que_son_coord}
+        \input{desarrollo/introduccion/que_son_coord.tex}
     \subsection{Gráfica de un punto en coordenadas esféricas}
-        \input{graph}
+        \input{desarrollo/introduccion/graph.tex}
   \section{Conversión de coordenadas}
     \subsection{De coordenadas rectangulares a esféricas}
-        \input{rect_2_esf}
+        \input{desarrollo/conversion/rect_2_esf.tex}
     \subsection{De coordenadas esféricas a rectangulares}
-        \input{esf_2_rect}
+        \input{desarrollo/conversion/esf_2_rect.tex}
   \section{Conclusiones}
+    \input{desarrollo/conclusiones.tex}
   
   \chapter{Referencias}
-    \input{ref}
+    \input{referencias/ref.tex}
   
 \end{document}
