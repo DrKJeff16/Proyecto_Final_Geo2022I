@@ -1,2 +1,6 @@
 /tags
 /.env
+/*.aux
+/*.log
+/*.toc
+/*.pdf
