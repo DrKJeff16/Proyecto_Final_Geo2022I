@@ -1,14 +1,15 @@
-% --TODO - Proyecto:
+% --TODO: - Proyecto:
 %    - Crear flujo de trabajo []
 %    - Asignar temas y trabajos a cada uno []
 %    - Crear y configurar el repositorio [X] - Guena
 
-% --TODO - Utilidades de LaTeX:
+% --TODO: - Utilidades de LaTeX:
 %    - Averiguar como implementar graficas y demas []
 %    - (Opcional) Implementar vista de Presentacion []
 %    - (Opcional) Cambiar la fuente del proyecto por una mejor []
 
 \documentclass[letterpaper,14pt]{extreport} % Modo Papel de carta, fuente de 14pt, formato de reporte
+
 % --BUG: Poner 'twosided' (impreso al frente y al reves) arruina el formato
 
 \usepackage[utf8]{inputenc}
@@ -29,10 +30,9 @@
 \author{Guennadi Maximov Cortés, Johan Wences} % Pon tu nombre completo :v
 \date{19/01/2022} % Cambiar la fecha cada vez que se edite este documento
 
-% --FIXME: Eliminar la numeracion tipo "0.X.X" de la Tabla de Contenidos
 \renewcommand*\contentsname{Índice} % Da formato a la Tabla de Contenidos
 
-% -- Elimina el texto "Chapter N"
+% --FIX: Elimina el texto "Chapter N"
 \makeatletter
 \def\@makechapterhead#1{
   \vspace*{50\p@}{\parindent\z@ \raggedright\normalfont
@@ -55,35 +55,43 @@
   \pagenumbering{arabic}
   \tableofcontents
   \newpage
-  
+
   \chapter{Introducción}
-    \input{introduccion/introduccion.tex}
-  \section{Marco histórico}
-    \input{introduccion/marco_historico.tex}
-  \section{Abstracto}
-    \input{introduccion/abstracto.tex}
-  
+      \input{introduccion/introduccion.tex}
+    \section{Marco histórico}
+      \input{introduccion/marco_historico.tex}
+
+    \section{Abstracto}
+      \input{introduccion/abstracto.tex}
+
   \chapter{Desarrollo}
     \renewcommand{\chaptername}{Jornada}
     \input{desarrollo/desarrollo.tex}
-  \section{Introducción}
-    \subsection{¿Qué es una esfera?}
-        \input{desarrollo/introduccion/que_es_esfera.tex}
-    \subsection{Ecuación de una esfera}
-        \input{desarrollo/introduccion/ecuacion_esfera.tex}
-    \subsection{¿Qué son las coordenadas esféricas?}
-        \input{desarrollo/introduccion/que_son_coord.tex}
-    \subsection{Gráfica de un punto en coordenadas esféricas}
-        \input{desarrollo/introduccion/graph.tex}
-  \section{Conversión de coordenadas}
-    \subsection{De coordenadas rectangulares a esféricas}
-        \input{desarrollo/conversion/rect_2_esf.tex}
-    \subsection{De coordenadas esféricas a rectangulares}
-        \input{desarrollo/conversion/esf_2_rect.tex}
-  \section{Conclusiones}
-    \input{desarrollo/conclusiones.tex}
-  
+
+    \section{Introducción}
+      \subsection{¿Qué es una esfera?}
+          \input{desarrollo/introduccion/que_es_esfera.tex}
+
+      \subsection{Ecuación de una esfera}
+          \input{desarrollo/introduccion/ecuacion_esfera.tex}
+
+      \subsection{¿Qué son las coordenadas esféricas?}
+          \input{desarrollo/introduccion/que_son_coord.tex}
+
+      \subsection{Gráfica de un punto en coordenadas esféricas}
+          \input{desarrollo/introduccion/graph.tex}
+
+    \section{Conversión de coordenadas}
+      \subsection{De coordenadas rectangulares a esféricas}
+          \input{desarrollo/conversion/rect_2_esf.tex}
+
+      \subsection{De coordenadas esféricas a rectangulares}
+          \input{desarrollo/conversion/esf_2_rect.tex}
+
+    \section{Conclusiones}
+      \input{desarrollo/conclusiones.tex}
+
   \chapter{Referencias}
     \input{referencias/ref.tex}
-  
+
 \end{document}
