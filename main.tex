@@ -19,23 +19,27 @@
 \usepackage{blindtext}
 \usepackage{geometry}
 \usepackage{enumitem}
+\usepackage{authblk}
 
 % --TODO: - Titulo:
 %    - Dar formato al titulo []
-%    - Poner correctamente los nombres de autor []
+%    - Poner correctamente los nombres de autor [X] - Guena
 %    - Agregar la materia []
 %    - Agregar la fecha oficial []
 
-\title{Cambios de Coordenadas Rectangulares a Esféricas} % El titulo del documento
-\author{Guennadi Maximov Cortés, Johan Ulises Herrera Wences}
-\date{21/01/2022} % Cambiar la fecha cada vez que se edite este documento
+\title{Cambios de Coordenadas Rectangulares a Esféricas}
+% --CHANGED: Agregados múltiples autores + afiliaciones (authblk)
+\author[1]{Guennadi Maximov Cortés}
+\author[2]{Johan Ulises Herrera Wences}
+\affil[1,2]{Tecnologías de la Información en Ciencias, Universidad Nacional Autónoma de México}
+\date{21/01/2022} % FIXME: Cambiar la fecha cada vez que se edite este documento
 
 \renewcommand*\contentsname{Índice} % Da formato a la Tabla de Contenidos
 
-% --FIX: Elimina el texto "Chapter N"
+% --CHANGED: Elimina el texto "Chapter N"
 \makeatletter
 \def\@makechapterhead#1{
-  \vspace*{50\p@}{\parindent\z@ \raggedright\normalfont
+  \vspace*{50\p@}{\parindent\z@\raggedright\normalfont
   \ifnum\c@secnumdepth>\m@ne
     \if @mainmatter\Huge\bfseries\space\thechapter.\space
     \fi
@@ -58,6 +62,7 @@
 
   \chapter{Introducción}
       \input{introduccion/introduccion.tex}
+
     \section{Marco histórico}
       \input{introduccion/marco_historico.tex}
 
