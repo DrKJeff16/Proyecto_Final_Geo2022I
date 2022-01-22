@@ -19,6 +19,10 @@
 \usepackage{blindtext}
 \usepackage{geometry}
 \usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+
+\graphicspath{ {images/} }
 
 % --TODO: - Titulo:
 %    - Dar formato al titulo []
@@ -82,11 +86,13 @@
           \input{desarrollo/introduccion/graph.tex}
 
     \section{Conversión de coordenadas}
-      \subsection{De coordenadas rectangulares a esféricas}
-          \input{desarrollo/conversion/rect_2_esf.tex}
+      \input{desarrollo/conversion/conversion_intro}
 
       \subsection{De coordenadas esféricas a rectangulares}
           \input{desarrollo/conversion/esf_2_rect.tex}
+
+      \subsection{De coordenadas rectangulares a esféricas}
+          \input{desarrollo/conversion/rect_2_esf.tex}
 
     \section{Conclusiones}
       \input{desarrollo/conclusiones.tex}
