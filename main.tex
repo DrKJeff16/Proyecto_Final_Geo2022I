@@ -1,16 +1,12 @@
 % --TODO: - Proyecto:
-%    - Crear flujo de trabajo [X] - Guena
+%    - Crear flujo de trabajo [X] - Johan
 %    - Asignar temas y trabajos a cada uno [X] - Guena
 %    - Crear y configurar el repositorio [X] - Guena
 
 % --TODO: - Utilidades de LaTeX:
-%    - Averiguar como implementar graficas y demas []
-%    - (Opcional) Implementar vista de Presentacion []
-%    - (Opcional) Cambiar la fuente del proyecto por una mejor []
+%    - Averiguar como implementar graficas y demas [X] - Johan
 
 \documentclass[letterpaper,14pt]{extreport} % Modo Papel de carta, fuente de 14pt, formato de reporte
-
-% --BUG: Poner 'twosided' (impreso al frente y al reves) arruina el formato
 
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -24,21 +20,20 @@
 \usepackage{authblk}
 
 % --TODO: - Titulo:
-%    - Dar formato al titulo []
+%    - Dar formato al titulo [X] - Guena
 %    - Poner correctamente los nombres de autor [X] - Guena
-%    - Agregar la materia []
-%    - Agregar la fecha oficial []
+%    - Agregar la fecha oficial [X] - Guena
 
 \title{Cambios de Coordenadas Rectangulares a Esféricas}
 % --CHANGED: Agregados múltiples autores + afiliaciones (authblk)
 \author[1]{Guennadi Maximov Cortés}
 \author[2]{Johan Ulises Herrera Wences}
 \affil[1,2]{Tecnologías de la Información en Ciencias, Universidad Nacional Autónoma de México}
-\date{21/01/2022} % FIXME: Cambiar la fecha cada vez que se edite este documento
+\date{25/01/2022}
 
 \renewcommand*\contentsname{Índice} % Da formato a la Tabla de Contenidos
 
-% --CHANGED: Elimina el texto "Chapter N"
+% --FIXED: Elimina el texto "Chapter N"
 \makeatletter
 \def\@makechapterhead#1{
   \vspace*{50\p@}{\parindent\z@\raggedright\normalfont
@@ -96,7 +91,6 @@
 
           \subsubsection{Ejemplos prácticos de transformación de coordenadas esféricas a rectangulares}
           \input{./desarrollo/conversion/esf_2_rect_ejemplos.tex}
-
 
       \subsection{De coordenadas rectangulares a esféricas}
           \input{./desarrollo/conversion/rect_2_esf.tex}
