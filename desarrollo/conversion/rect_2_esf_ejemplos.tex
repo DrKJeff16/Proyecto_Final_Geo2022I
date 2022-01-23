@@ -1,0 +1,32 @@
+1) Convertir la coordenada ${(1,2,2)}$ rectangular al sistema esférico.
+\[\rho = \sqrt{x^{2}+y^{2}+z^{2}} = \sqrt{1^{2}+2^{2}+2^{2}} = 3\]
+\[\varphi = cos^{-1}\left(\frac{z}{p}\right) = cos^{-1}\left(\frac{2}{3}\right) = 48.19^{\circ} = 0.84\]
+\[\theta = tan^{-1}(2) = 63.43^{\circ} = 1.11\]
+
+\vspace{4mm}
+2) Convertir la coordenada ${(-2,2\sqrt{3},4)}$ rectangular al sistema esférico.
+\[\rho = \sqrt{x^{2}+y^{2}+z^{2}} = \sqrt{(-2)^2+(2\sqrt{3})^{2}+4^{2}} = 4 \sqrt{2}\]
+\[\varphi = cos^{-1}\left(\frac{4}{4\sqrt{2}}\right) = 45^{\circ} = \frac{\pi}{4}\]
+
+\vspace{4mm}
+Es importante analizar las coordenadas ${(x,y)}$, es decir ${(-2,2\sqrt{3})}$ para determinar su cuadrante y de esa manera saber cómo proceder en el proceso de obtención del valor de ${\theta}$. Como en éste caso, se encuentra en el segundo cuadrante, entonces no es útil el uso de la ecuación deducida anteriormente para encontrar ${\theta}$, sino determinar el ángulo complementario ${\alpha}$ y luego realizar la resta de dicho ángulo para determinar ${\theta}$, se puede visualizar en la siguiente imagen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=11.17cm, height=5.67cm]{img/graph/segundo_cuadrante.jpg}
+  \caption{Punto con coordenadas ${(-2,2\sqrt{3})}$.}
+\end{figure}
+
+Donde ${\alpha}$ representa el ángulo de interés para abordar su complemento ${\theta}$. Entonces, para encontrar el ángulo ${\alpha}$ se sabe que:
+\[\alpha = tan^{-1}\left(\frac{y}{x}\right) = tan^{-1} \left( \left|\frac{2\sqrt{3}}{-2} \right| \right) = tan^{-1}(\sqrt{3}) = 60^{\circ} = \frac{\pi}{3} \]
+\[\therefore \theta = 180^{\circ} - \alpha = 120^{\circ} =\frac{2\pi}{3}\]
+
+\vspace{4mm}
+3) Convertir la coordenada ${(-\sqrt{3},-1,-2\sqrt{3})}$ a su forma esférica.
+\[\rho = \sqrt{x^{2}+y^{2}+z^{2}} = \sqrt{(-\sqrt{3})^{2}+(-1)^{2}+(-2\sqrt{3})^{2}} = 4\]
+\[\varphi = cos^{-1}\left(\frac{z}{p}\right) = cos^{-1}\left(\frac{-2\sqrt{3}}{4}\right) = 150^{\circ} = \frac{5\pi}{6} \]
+
+\vspace{4mm}
+Nuevamente, primero calculamos el ángulo auxiliar ${\alpha}$ más cercano al eje x de las coordenadas ${(x,y) = (-\sqrt{3},-1)}$, como el punto se encuentra en el tercer cuadrante, entonces podremos realizar la suma del valor de ${\alpha}$ a ${180^{\circ}}$ para encontrar el valor de ${\theta}$.
+\[\alpha = tan^{-1}\left(\frac{y}{x}\right) = tan^{-1}\left( \left|\frac{-1}{-\sqrt{3}}\right| \right) = 30^{\circ}\]
+\[\therefore \theta = 180^{\circ} + \alpha = 210^{\circ} = \frac{7\pi}{6}\]
