@@ -42,7 +42,7 @@ def get_point():
     return tuple(ent)
 
 
-def rect_to_sph(rect: tuple[float]) -> tuple[float]:
+def rect_to_sph(rect):
     """Convierte de coordenadas rectangulares a esfericas"""
     x = rect[0] * math.cos(rect[1]) * math.sin(rect[2])
     y = rect[0] * math.sin(rect[1]) * math.sin(rect[2])
@@ -51,7 +51,7 @@ def rect_to_sph(rect: tuple[float]) -> tuple[float]:
     return (x, y, z)
 
 
-def sph_to_rect(sph: tuple[float]) -> tuple[float]:
+def sph_to_rect(sph):
     """Convierte de coordenadas esfericas a rectangulares"""
     rho = math.sqrt(sph[0] ** 2 + sph[1] ** 2 + sph[2] ** 2)
     phi = math.acos(sph[2] / rho)
@@ -61,6 +61,7 @@ def sph_to_rect(sph: tuple[float]) -> tuple[float]:
 
 
 if __name__ == '__main__':
+    
     print(rect_to_sph((3, 0.0, math.pi / 3)))
 
     sys.exit()
