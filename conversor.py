@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # - authors: Guennadi Maximov Cortes, Johan Wences
 # - email:  g.maxc.fox@protonmail.com
-# - date:   23-Jan-2022
+# - date:   25-Jan-2022
 # - filename: conversor.py
 # - last modified by:   Guennadi Maximov Cortes
-# - last modified time: 23-Jan-2022
+# - last modified time: 25-Jan-2022
 # - license: MIT
 """Conversor de coordenadas rectangulares esfericas y vice versa"""
 
