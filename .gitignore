@@ -1,4 +1,9 @@
 /*.swp
+/.ropeproject
+/*.bcf
+/*.run.xml
+/*.bbl
+/*.blg
 /*.fdb_latexmk
 /*.fls
 /tags

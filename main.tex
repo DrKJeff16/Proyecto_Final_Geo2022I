@@ -18,6 +18,13 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{authblk}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{ref.bib}
 
 % --TODO: - Titulo:
 %    - Dar formato al titulo [X] - Guena
@@ -99,7 +106,8 @@
     \section{Conclusiones}
       \input{./desarrollo/conclusiones.tex}
 
-  \chapter{Referencias}
-    \input{./referencias/ref.tex}
+  \medskip
+
+  \printbibliography[title={Referencias}]
 
 \end{document}
