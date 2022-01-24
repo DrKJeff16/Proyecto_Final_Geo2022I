@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-# - authors: Guennadi Maximov Cortés, Johan Wences
+# - authors: Guennadi Maximov Cortes, Johan Wences
 # - email:  g.maxc.fox@protonmail.com
 # - date:   23-Jan-2022
 # - filename: conversor.py
-# - last modified by:   Guennadi Maximov Cortés
+# - last modified by:   Guennadi Maximov Cortes
 # - last modified time: 23-Jan-2022
 # - license: MIT
 """Conversor de coordenadas rectangulares esfericas y vice versa"""
@@ -42,7 +42,7 @@ def get_point():
     return tuple(ent)
 
 
-def rect_to_sph(rect: tuple[float]) -> tuple[float]:
+def rect_to_sph(rect):
     """Convierte de coordenadas rectangulares a esfericas"""
     x = rect[0] * math.cos(rect[1]) * math.sin(rect[2])
     y = rect[0] * math.sin(rect[1]) * math.sin(rect[2])
@@ -51,7 +51,7 @@ def rect_to_sph(rect: tuple[float]) -> tuple[float]:
     return (x, y, z)
 
 
-def sph_to_rect(sph: tuple[float]) -> tuple[float]:
+def sph_to_rect(sph):
     """Convierte de coordenadas esfericas a rectangulares"""
     rho = math.sqrt(sph[0] ** 2 + sph[1] ** 2 + sph[2] ** 2)
     phi = math.acos(sph[2] / rho)
