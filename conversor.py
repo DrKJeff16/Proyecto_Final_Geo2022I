@@ -60,6 +60,7 @@ def sph_to_rect(sph: tuple[float]) -> tuple[float]:
     return (rho, phi, theta)
 
 
-print(rect_to_sph((3, 0.0, math.pi / 3)))
+if __name__ == '__main__':
+    print(rect_to_sph((3, 0.0, math.pi / 3)))
 
-sys.exit()
+    sys.exit()
