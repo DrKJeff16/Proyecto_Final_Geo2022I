@@ -65,6 +65,7 @@ def rect_to_sph(sph):
 if __name__ == '__main__':
     coords = get_point()
     tipo = int(input("\n1) Convertir de Coordenadas Rectangulares a Esfericas\n2) Convertir de Coordenadas Esfericas a Rectangulares\n: "))
+
     if tipo == 1:
         print(rect_to_sph(coords))
     elif tipo == 2:
