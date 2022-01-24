@@ -35,6 +35,8 @@ def get_point():
 
             if len(ent) != 3:
                 raise ValueError("No hay suficientes componentes.")
+            else:
+                break
 
         except ValueError:
             txt = "Intente nuevamente: "
@@ -42,7 +44,7 @@ def get_point():
     return tuple(ent)
 
 
-def rect_to_sph(rect):
+def sph_to_rect(rect):
     """Convierte de coordenadas rectangulares a esfericas"""
     x = rect[0] * math.cos(rect[1]) * math.sin(rect[2])
     y = rect[0] * math.sin(rect[1]) * math.sin(rect[2])
@@ -51,7 +53,7 @@ def rect_to_sph(rect):
     return (x, y, z)
 
 
-def sph_to_rect(sph):
+def rect_to_sph(sph):
     """Convierte de coordenadas esfericas a rectangulares"""
     rho = math.sqrt(sph[0] ** 2 + sph[1] ** 2 + sph[2] ** 2)
     phi = math.acos(sph[2] / rho)
@@ -61,6 +63,13 @@ def sph_to_rect(sph):
 
 
 if __name__ == '__main__':
-    print(rect_to_sph((3, 0.0, math.pi / 3)))
+    coords = get_point()
+    tipo = int(input("\n1) Convertir de Coordenadas Rectangulares a Esfericas\n2) Convertir de Coordenadas Esfericas a Rectangulares\n:"))
+    if tipo == 1:
+        print(rect_to_sph(coords))
+    elif tipo == 2:
+        print(sph_to_rect(coords))
+    else:
+        sys.exit(1)
 
     sys.exit()
