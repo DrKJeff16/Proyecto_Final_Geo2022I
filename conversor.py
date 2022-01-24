@@ -13,9 +13,12 @@ import math
 import sys
 
 
-def get_point():
+def get_point(tp):
     """Retorna una tupla conteniendo cada componente de la coordenada rectangular"""
-    txt = "Ingrese cada una de las coordenadas, separadas por un espacio: "
+    if tp == 1:
+        txt = "Ingrese cada una de las coordenadas rectangulares, separadas por un espacio: "
+    elif tp == 2:
+        txt = "Ingrese cada una de las coordenadas esfericas, separadas por un espacio: "
 
     while True:
         try:
@@ -63,8 +66,8 @@ def rect_to_sph(sph):
 
 
 if __name__ == '__main__':
-    coords = get_point()
     tipo = int(input("\n1) Convertir de Coordenadas Rectangulares a Esfericas\n2) Convertir de Coordenadas Esfericas a Rectangulares\n: "))
+    coords = get_point(tipo)
 
     if tipo == 1:
         print(rect_to_sph(coords))
