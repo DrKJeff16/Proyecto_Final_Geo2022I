@@ -1,4 +1,4 @@
-# GeoAnal-TICS202I
+# Proyecto_Final_Geo2022I
 
 ## Requerimentos
 
@@ -7,7 +7,7 @@
 *   Debian/Ubuntu
 
 ```bash
-sudo apt update && sudo apt install texlive-full
+sudo apt update && sudo apt install texlive-full biber
 ```
 
 *   Arch/Manjaro
