@@ -1,15 +1,16 @@
 #!/usr/bin/env python
-# - authors: Guennadi Maximov Cortes, Johan Wences
+# - authors: Guennadi Maximov Cortes, Johan Ulises Herrera Wences
 # - email:  g.maxc.fox@protonmail.com
 # - date:   25-Jan-2022
 # - filename: conversor.py
 # - last modified by:   Guennadi Maximov Cortes
-# - last modified time: 25-Jan-2022
+# - last modified time: 03-Feb-2022
 # - license: MIT
 """Conversor de coordenadas rectangulares esfericas y vice versa"""
 
 
-import math
+from math import pow, sqrt, pi, cos, sin, acos, atan
+# import numpy as np
 import sys
 
 
@@ -19,6 +20,8 @@ def get_point(tp):
         txt = "Ingrese cada una de las coordenadas rectangulares, separadas por un espacio: "
     elif tp == 2:
         txt = "Ingrese cada una de las coordenadas esfericas, separadas por un espacio: "
+    else:
+        raise ValueError("Valor invalido.")
 
     while True:
         try:
@@ -47,26 +50,33 @@ def get_point(tp):
     return tuple(ent)
 
 
-def sph_to_rect(rect):
+def sph_to_rect(sph):
     """Convierte de coordenadas rectangulares a esfericas"""
-    x = rect[0] * math.cos(rect[1]) * math.sin(rect[2])
-    y = rect[0] * math.sin(rect[1]) * math.sin(rect[2])
-    z = rect[0] * math.cos(rect[2])
+    x = sph[0] * cos(sph[1]) * sin(sph[2])
+    y = sph[0] * sin(sph[1]) * sin(sph[2])
+    z = sph[0] * cos(sph[2])
 
     return (x, y, z)
 
 
-def rect_to_sph(sph):
+def rect_to_sph(rect):
     """Convierte de coordenadas esfericas a rectangulares"""
-    rho = math.sqrt((sph[0] ** 2) + (sph[1] ** 2) + (sph[2] ** 2))
-    phi = math.acos(sph[2] / rho)
-    theta = math.atan(sph[1] / sph[0])
+    for idex, val in enumerate(rect):
+        if val not in [float]:
+            rect[idex] = float(val)
+
+    rho = sqrt(math.pow(rect[0], 2) + pow(rect[1], 2) + pow(rect[2], 2))
+    phi = acos(rect[2] / rho)
+    theta = atan(rect[1] / rect[0])
 
     return (rho, phi, theta)
 
 
 if __name__ == '__main__':
-    tipo = int(input("\n1) Convertir de Coordenadas Rectangulares a Esfericas\n2) Convertir de Coordenadas Esfericas a Rectangulares\n: "))
+    print("\n1) Convertir de Coordenadas Rectangulares a Esfericas\n",
+            "2) Convertir de Coordenadas Esfericas a Rectangulares\n\n",
+            end='', sep='')
+    tipo = int(input("Elija su opcion: "))
     coords = get_point(tipo)
 
     if tipo == 1:
@@ -76,4 +86,4 @@ if __name__ == '__main__':
     else:
         sys.exit(1)
 
-    sys.exit()
+    sys.exit(0)
