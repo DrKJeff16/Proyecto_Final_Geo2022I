@@ -61,11 +61,7 @@ def sph_to_rect(sph):
 
 def rect_to_sph(rect):
     """Convierte de coordenadas esfericas a rectangulares"""
-    for idex, val in enumerate(rect):
-        if val not in [float]:
-            rect[idex] = float(val)
-
-    rho = sqrt(math.pow(rect[0], 2) + pow(rect[1], 2) + pow(rect[2], 2))
+    rho = sqrt(pow(rect[0], 2) + pow(rect[1], 2) + pow(rect[2], 2))
     phi = acos(rect[2] / rho)
     theta = atan(rect[1] / rect[0])
 
